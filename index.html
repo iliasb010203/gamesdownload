@@ -16,15 +16,14 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0f172a;
-    color: #fff;
+    color: white;
 }
 
 .header {
-    background: #020617;
-    padding: 15px;
     text-align: center;
+    padding: 20px;
     font-size: 24px;
-    font-weight: bold;
+    background: #020617;
 }
 
 .container {
@@ -37,15 +36,10 @@ body {
 
 .card {
     background: #1e293b;
-    border-radius: 15px;
     padding: 15px;
+    border-radius: 15px;
     width: 300px;
     text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 .game-img {
@@ -53,27 +47,18 @@ body {
     border-radius: 10px;
 }
 
-.game-title {
+.title {
     margin: 10px 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-.desc {
-    font-size: 14px;
-    opacity: 0.8;
-}
-
 .btn {
-    display: block;
     background: #22c55e;
-    color: white;
     padding: 12px;
     border-radius: 8px;
-    text-decoration: none;
-    margin-top: 15px;
-    font-weight: bold;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .btn:hover {
@@ -82,59 +67,50 @@ body {
 
 .loader {
     display: none;
-    margin-top: 10px;
     font-size: 14px;
+    margin-top: 10px;
     color: #38bdf8;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;
-    opacity: 0.6;
 }
 </style>
 
 </head>
 <body>
 
-<div class="header">🎮 Premium Game Downloads</div>
+<div class="header">🎮 Download Premium Games</div>
 
 <div class="container">
 
     <!-- GOD OF WAR -->
     <div class="card">
         <img src="https://via.placeholder.com/300x180" class="game-img">
-        <div class="game-title">🔥 God of War</div>
-        <div class="desc">Epic action-adventure with intense combat and story.</div>
-        <div class="btn" onclick="startDownload(this)">⬇️ Download APK</div>
-        <div class="loader">Checking device compatibility...</div>
+        <div class="title">🔥 God of War</div>
+
+        <div class="btn" onclick="downloadGame(this)">⬇️ Download APK</div>
+        <div class="loader">Preparing your download...</div>
     </div>
 
     <!-- RESIDENT EVIL -->
     <div class="card">
         <img src="https://via.placeholder.com/300x180" class="game-img">
-        <div class="game-title">🧟 Resident Evil Requiem</div>
-        <div class="desc">Survive horror, fight zombies, and explore darkness.</div>
-        <div class="btn" onclick="startDownload(this)">⬇️ Download APK</div>
-        <div class="loader">Checking device compatibility...</div>
+        <div class="title">🧟 Resident Evil Requiem</div>
+
+        <div class="btn" onclick="downloadGame(this)">⬇️ Download APK</div>
+        <div class="loader">Preparing your download...</div>
     </div>
 
 </div>
 
-<footer>
-This site is not affiliated with official publishers. All rights belong to respective owners.
-</footer>
-
 <script>
-function startDownload(button) {
-    let loader = button.nextElementSibling;
-    loader.style.display = "block";
-    button.innerText = "Preparing Download...";
+function downloadGame(btn) {
+    let loader = btn.nextElementSibling;
 
+    loader.style.display = "block";
+    btn.innerText = "Checking...";
+
+    // 🔥 Delay (better conversion)
     setTimeout(function() {
-        _Cm(); // OPEN CPA LOCKER
-    }, 2000);
+        _Cm(); // OPEN LOCKER
+    }, 3000);
 }
 </script>
 
