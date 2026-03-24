@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download Premium Games</title>
+<title>Download Games</title>
 
-<!-- CPA LOCKER SCRIPT -->
+<!-- CPA LOCKER -->
 <script type="text/javascript">
 var bGTKb_DBy_vvELqc = {"it":4596009,"key":"51677"};
 </script>
@@ -13,104 +13,53 @@ var bGTKb_DBy_vvELqc = {"it":4596009,"key":"51677"};
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background: #0f172a;
     color: white;
-}
-
-.header {
     text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    background: #020617;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
 }
 
 .card {
     background: #1e293b;
-    padding: 15px;
-    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
     width: 300px;
-    text-align: center;
-}
-
-.game-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.title {
-    margin: 10px 0;
-    font-size: 20px;
-    font-weight: bold;
+    border-radius: 15px;
 }
 
 .btn {
     background: #22c55e;
     padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
     margin-top: 15px;
-}
-
-.btn:hover {
-    background: #16a34a;
-}
-
-.loader {
-    display: none;
-    font-size: 14px;
-    margin-top: 10px;
-    color: #38bdf8;
+    cursor: pointer;
+    border-radius: 8px;
 }
 </style>
 
 </head>
 <body>
 
-<div class="header">🎮 Download Premium Games</div>
+<h2>🎮 Download Premium Games</h2>
 
-<div class="container">
+<div class="card">
+    <h3>🔥 God of War</h3>
+    <div class="btn" onclick="openLocker()">Download</div>
+</div>
 
-    <!-- GOD OF WAR -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180" class="game-img">
-        <div class="title">🔥 God of War</div>
-
-        <div class="btn" onclick="_Cm()">⬇️ Download APK</div>
-        <div class="loader">Preparing your download...</div>
-    </div>
-
-    <!-- RESIDENT EVIL -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180" class="game-img">
-        <div class="title">🧟 Resident Evil Requiem</div>
-
-        <div class="btn" onclick="_Cm()">⬇️ Download APK</div>
-        <div class="loader">Preparing your download...</div>
-    </div>
-
+<div class="card">
+    <h3>🧟 Resident Evil</h3>
+    <div class="btn" onclick="openLocker()">Download</div>
 </div>
 
 <script>
-function downloadGame(btn) {
-    let loader = btn.nextElementSibling;
-
-    loader.style.display = "block";
-    btn.innerText = "Checking...";
-
-    // 🔥 Delay (better conversion)
-    setTimeout(function() {
-        _Cm(); // OPEN LOCKER
-    }, 3000);
+function openLocker() {
+    if (typeof _Cm === "function") {
+        setTimeout(function() {
+            _Cm();
+        }, 2000);
+    } else {
+        alert("Locker not loaded. Disable AdBlock or try hosting online.");
+    }
 }
 </script>
 
