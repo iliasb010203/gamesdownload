@@ -16,40 +16,141 @@ body {
     font-family: Arial;
     background: #0f172a;
     color: white;
+    margin: 0;
+}
+
+/* SECTION */
+section {
+    padding: 30px 20px;
+}
+
+/* GALLERY */
+.gallery {
+    max-width: 400px;
+    margin: auto;
+}
+
+.gallery-image img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.gallery-nav {
     text-align: center;
 }
 
-.card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 20px auto;
-    width: 300px;
-    border-radius: 15px;
+.gallery-dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    display: inline-block;
+    background: #475569;
+    border-radius: 50%;
 }
 
-.btn {
+.gallery-dot.active {
     background: #22c55e;
+}
+
+/* DOWNLOAD SECTION */
+.download-section {
+    background: #1e293b;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.download-title {
+    font-size: 22px;
+}
+
+.download-subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.download-button {
+    display: block;
+    background: #22c55e;
+    margin: 10px auto;
     padding: 12px;
-    margin-top: 15px;
-    cursor: pointer;
     border-radius: 8px;
+    width: 80%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* WHAT'S NEW */
+.whats-new {
+    max-width: 400px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 20px;
+}
+
+.version {
+    color: #94a3b8;
+}
+
+.update-list {
+    text-align: left;
 }
 </style>
-
 </head>
+
 <body>
 
-<h2>🎮 Download Premium Games</h2>
+<!-- GALLERY -->
+<section class="gallery">
+    <div class="gallery-image">
+        <img src="https://i.ibb.co/zhnBV9sk/image.png" alt="Screenshot 1">
+    </div>
+    <div class="gallery-image">
+        <img src="https://i.ibb.co/1YWg99RD/ZDQ.jpg" alt="Screenshot 2">
+    </div>
 
-<div class="card">
-    <h3>🔥 God of War</h3>
-    <div class="btn" onclick="_Cm()">Download</div>
-</div>
+    <div class="gallery-nav">
+        <span class="gallery-dot active"></span>
+        <span class="gallery-dot"></span>
+        <span class="gallery-dot"></span>
+    </div>
+</section>
 
-<div class="card">
-    <h3>🧟 Resident Evil</h3>
-    <div class="btn" onclick="_Cm()">Download</div>
-</div>
+<!-- DOWNLOAD -->
+<section class="download-section">
+    <div class="download-content">
+        <h2 class="download-title">Download Now</h2>
+        <p class="download-subtitle">
+            Experience the tactical shooter on your mobile device
+        </p>
+
+        <div class="download-button" onclick="_Cm()">
+            📱 Download for Android
+        </div>
+
+        <div class="download-button" onclick="_Cm()">
+            🍎 Download for iOS
+        </div>
+    </div>
+</section>
+
+<!-- WHAT'S NEW -->
+<section class="whats-new">
+    <h2 class="section-title">What's New</h2>
+    <p class="version">Version 1.0.3</p>
+
+    <ul class="update-list">
+        <li>New Map: Sunset Harbor</li>
+        <li>Agent balance updates</li>
+        <li>Performance improvements</li>
+        <li>Bug fixes and stability</li>
+    </ul>
+</section>
 
 <script>
 function openLocker() {
@@ -58,7 +159,7 @@ function openLocker() {
             _Cm();
         }, 2000);
     } else {
-        alert("Locker not loaded. Disable AdBlock or try hosting online.");
+        alert("Locker not loaded.");
     }
 }
 </script>
